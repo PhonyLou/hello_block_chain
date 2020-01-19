@@ -83,3 +83,15 @@ class BlockChain {
         return true;
     }
 }
+
+let testChain = new BlockChain()
+
+console.log("Mining block...")
+testChain.addBlock(new Block(1, timestamp, "This is block 1"))
+
+console.log("Mining block...")
+testChain.addBlock(new Block(2, timestamp, "This is block 2"))
+
+console.log(JSON.stringify(testChain, null, 4))
+
+console.log("Is blockchain valid? " + testChain.checkValid().toString())
